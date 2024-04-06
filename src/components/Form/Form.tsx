@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import './Form.css';
 
 interface FormProps {
   onFormSubmit: (newName: string, newScore: number) => void;
@@ -17,28 +18,31 @@ const Form: React.FC<FormProps> = ({ onFormSubmit }) => {
       alert('Please enter both a valid name and score.');
       return;
     }
-    
+
     onFormSubmit(newNameTrimmed, newScoreNumber);
     setNewName('');
     setNewScore('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <input
+        className="input"
         type="text"
         placeholder="Name"
         value={newName}
         onChange={(e) => setNewName(e.target.value)}
       />
       <input
+        className="input"
         type="number"
         placeholder="Score"
         value={newScore}
         onChange={(e) => setNewScore(e.target.value)}
       />
-      <button type="submit">Submit</button>
+      <button className="submit-button" type="submit">Submit</button>
     </form>
+
   );
 };
 

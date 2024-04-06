@@ -14,10 +14,10 @@ export interface ExcelDropzoneProps {
   label: string
 }
 
-export function ExcelDropzone (props: ExcelDropzoneProps) {
+export function ExcelDropzone(props: ExcelDropzoneProps) {
   const { label, onSheetDrop } = props
 
-  function handleFile (acceptedFiles: File[]) {
+  function handleFile(acceptedFiles: File[]) {
     const file = acceptedFiles[0]
     const reader = new window.FileReader()
     reader.onload = function (e) {
@@ -30,19 +30,19 @@ export function ExcelDropzone (props: ExcelDropzoneProps) {
   }
 
   return (
-      <Dropzone
-        multiple={ false }
-        onDrop={ handleFile }
-      >
-        {({getRootProps}) => (
-          <Box
-            { ...getRootProps() }
-            border="2px dashed"
-            borderColor={ palette.gray['200']}
-            minW="20%"
-          >
-            <Center height="200">{ label }</Center>
-          </Box>
+    <Dropzone
+      multiple={false}
+      onDrop={handleFile}
+    >
+      {({ getRootProps }) => (
+        <Box
+          {...getRootProps()}
+          border="2px dashed"
+          borderColor={palette.gray['200']}
+          minW="20%"
+        >
+          <Center height="200">{label}</Center>
+        </Box>
       )}
     </Dropzone>
   )

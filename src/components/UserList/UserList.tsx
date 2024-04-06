@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserList.css'
 
 export interface User {
   _id?: number;
@@ -14,16 +15,17 @@ interface UserListProps {
 
 const UserList: React.FC<UserListProps> = ({ users, onUserClick }) => {
   return (
-    <div>
-      <h2>User List</h2>
-      <ul>
+    <div className="user-list-container">
+      <h2 className="list-heading">User List</h2>
+      <ul className="list">
         {users.map(user => (
-          <li key={user._id} onClick={() => onUserClick(user)}>
-            {user.name} - Best Score: {user.bestScore}
+          <li key={user._id} className="list-item" onClick={() => onUserClick(user)}>
+            <span className="user-name">{user.name}</span> - Best Score: <span className="best-score">{user.bestScore}</span>
           </li>
         ))}
       </ul>
     </div>
+
   );
 };
 

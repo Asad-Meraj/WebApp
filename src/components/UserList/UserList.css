@@ -1,0 +1,30 @@
+.user-list-container {
+    background-color: #e6cfcf; /* Background color for the user list container */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .list-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .best-score {
+    color: #764b57; /* Color for the best score */
+  }
+  
