@@ -1,11 +1,8 @@
-/* Home Page Styles */
-
-
-  .container {
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #FEE5D8; /* Set content background color */
+    background-color: #FEE5D8; 
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
@@ -50,9 +47,7 @@
   .form {
     margin-bottom: 20px;
   }
-  
-  /* Button Styles */
-  
+    
   .button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -74,7 +69,6 @@
     cursor: pointer;
   }
   
-  /* Media Queries */
   
   @media screen and (max-width: 768px) {
     .container {
